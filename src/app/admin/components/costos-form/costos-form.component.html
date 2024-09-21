@@ -1,0 +1,242 @@
+<form [formGroup]="form" autocomplete="off" class="m-2">
+
+    <div class="flex justify-content-between align-items-center">
+        <h2> {{ mode() === 'query' ? 'Consultar' : mode() === 'edit' ? 'Editar': 'Crear' }} Productor </h2>
+        <p-button label="Regresar" (click)="back()" />
+    </div>
+
+    <p-scrollPanel [style]="{ width: '100%', height: '600px', backgroundColor: '#eeee' }">
+        <div class="grid p-3">
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="cod_depto">Departamento*</label>
+                <p-dropdown appendTo="body" [checkmark]="true" [showClear]="true" optionLabel="nombre"
+                    optionValue="cod_depart" formControlName="cod_depto" [options]="departamentos" id="cod_depto"
+                    [filter]="true" filterBy="nombre" />
+                <small class="p-error" *ngIf="getCampoValido('cod_depto')">{{getErrMsg('cod_depto')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="cod_mpio">Municipio*</label>
+                <p-dropdown appendTo="body" [checkmark]="true" [showClear]="true" optionLabel="municipio"
+                    optionValue="cod_dane_mpio" formControlName="cod_mpio" [options]="filteredMunicipios" id="cod_mpio"
+                    [filter]="true" filterBy="municipio" />
+                <small class="p-error" *ngIf="getCampoValido('cod_mpio')">{{getErrMsg('cod_mpio')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="cod_vereda">Vereda</label>
+                <p-dropdown appendTo="body" [checkmark]="true" [showClear]="true" optionLabel="nombre_ver"
+                    optionValue="codigo_ver" formControlName="cod_vereda" [options]="filteredVeredas" id="cod_vereda"
+                    [filter]="true" filterBy="nombre_ver" />
+                <small class="p-error" *ngIf="getCampoValido('cod_vereda')">{{getErrMsg('cod_vereda')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="nombre_unidad_obs">Unidad de observación*</label>
+                <input type="text" pInputText formControlName="nombre_unidad_obs" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('nombre_unidad_obs')">{{getErrMsg('nombre_unidad_obs')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="numero_unidad_obs">Número unidad de observación*</label>
+                <p-inputNumber formControlName="numero_unidad_obs" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('numero_unidad_obs')">{{getErrMsg('numero_unidad_obs')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="cultivo_objetivo">Cultivo*</label>
+                <p-dropdown appendTo="body" [checkmark]="true" [showClear]="true" optionLabel="cultivo"
+                    optionValue="codigo" formControlName="cultivo_objetivo" [options]="cultivos" id="cultivo_objetivo"
+                    [filter]="true" filterBy="cultivo" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('cultivo_objetivo')">{{getErrMsg('cultivo_objetivo')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="variedad_cultivo">Variedad sembrada</label>
+                <input type="text" pInputText formControlName="variedad_cultivo" />
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="area_sembrada">Área sembrada (Ha)</label>
+                <p-inputNumber formControlName="area_sembrada" mode="decimal" />
+                <small class="p-error" *ngIf="getCampoValido('area_sembrada')">{{getErrMsg('area_sembrada')}}</small>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 flex flex-column gap-2">
+                <label for="fecha_siembra">Fecha de siembra</label>
+                <p-calendar appendTo="body" formControlName="fecha_siembra" />
+            </div>
+
+            <div class="col-12 lg:col-6 flex flex-column gap-2">
+                <label for="tipo_persona">Persona*</label>
+                <p-selectButton [options]="tipos_persona" formControlName="tipo_persona" />
+                <small class="p-error" *ngIf="getCampoValido('tipo_persona')">{{getErrMsg('tipo_persona')}}</small>
+            </div>
+
+            <ng-container *ngIf="form.get('tipo_persona')!.value === 'Natural'">
+                <div class="col-12 lg:col-6"></div>
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="primer_nombre_prod">Primer nombre*</label>
+                    <input type="text" pInputText formControlName="primer_nombre_prod" />
+                    <small class="p-error"
+                        *ngIf="getCampoValido('primer_nombre_prod')">{{getErrMsg('primer_nombre_prod')}}</small>
+                </div>
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="segundo_nombre_prod">Segundo nombre</label>
+                    <input type="text" pInputText formControlName="segundo_nombre_prod" />
+                </div>
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="primer_apellido_prod">Primer apellido*</label>
+                    <input type="text" pInputText formControlName="primer_apellido_prod" />
+                    <small class="p-error"
+                        *ngIf="getCampoValido('primer_apellido_prod')">{{getErrMsg('primer_apellido_prod')}}</small>
+                </div>
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="segundo_apellido_prod">Segundo apellido</label>
+                    <input type="text" pInputText formControlName="segundo_apellido_prod" />
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="form.get('tipo_persona')!.value === 'Jurídica'">
+                <div class="col-12 lg:col-6 sm:col-12 flex flex-column gap-2">
+                    <label for="razon_social">Nombre o razón social*</label>
+                    <input type="text" pInputText formControlName="razon_social" />
+                    <small class="p-error" *ngIf="getCampoValido('razon_social')">{{getErrMsg('razon_social')}}</small>
+                </div>
+            </ng-container>
+
+            <div class="col-12 flex flex-column gap-2">
+                <label for="ubicacion_finca">¿Tiene la ubicación de la finca?*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="ubicacion_finca" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('ubicacion_finca')">{{getErrMsg('ubicacion_finca')}}</small>
+            </div>
+
+
+            <ng-container *ngIf="form.get('ubicacion_finca')!.value === 'Si'">
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="y">Latitud*</label>
+                    <p-inputNumber formControlName="y" mode="decimal" minFractionDigits="8" />
+                    <small class="p-error" *ngIf="getCampoValido('y')">{{getErrMsg('y')}}</small>
+                </div>
+
+                <div class="col-12 md:col-6 flex flex-column gap-2">
+                    <label for="x">Longitud*</label>
+                    <p-inputNumber formControlName="x" mode="decimal" minFractionDigits="8" />
+                    <small class="p-error" *ngIf="getCampoValido('x')">{{getErrMsg('x')}}</small>
+                </div>
+
+                <div class="col-12 flex flex-column gap-2">
+                    <label for="ubicacion">Capturar posición*</label>
+                    <app-position-map #positionMap (onLocate)="setLatLng($event)" [disabled]="mode() === 'query'"
+                        [autoLocation]="mode() === 'new'"></app-position-map>
+                </div>
+
+                <ng-container *ngIf=" this.mode() !== 'query' && getControl('dentro_de_frontera').value === 'Si'">
+                    <small class="col-12"> La finca se encuentra dentro del rango de la frontera agrícola </small>
+                </ng-container>
+                <ng-container *ngIf=" this.mode() !== 'query' && getControl('dentro_de_frontera').value === 'No'">
+                    <small class="col-12"> La finca no se encuentra dentro del rango de la frontera agrícola </small>
+                </ng-container>
+            </ng-container>
+
+            <div class="col-12 lg:col-6 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="estado_seleccion">Seleccionado*</label>
+                <p-selectButton [options]="['Seleccionado', 'No seleccionado', 'Preseleccionado']"
+                    formControlName="estado_seleccion" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('estado_seleccion')">{{getErrMsg('estado_seleccion')}}</small>
+            </div>
+
+            <div *ngIf="!getControl('seleccionado_calculado').value &&  ['Seleccionado', 'Preseleccionado'].includes(getControl('estado_seleccion').value)"
+                class="col-12 flex flex-column gap-2">
+                <label for="justificacion_seleccion">Justificación selección*</label>
+                <textarea rows="2" cols="30" pInputTextarea formControlName="justificacion_seleccion"></textarea>
+                <small class="p-error"
+                    *ngIf="getCampoValido('justificacion_seleccion')">{{getErrMsg('justificacion_seleccion')}}</small>
+            </div>
+
+            <div class="col-12 lg:col-6 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="cumple_homogeneidad">Homogeneidad Variables Agroecológicas*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="cumple_homogeneidad" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('cumple_homogeneidad')">{{getErrMsg('cumple_homogeneidad')}}</small>
+            </div>
+
+            <div class="col-12 lg:col-6 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="cumple_experiencia">Experiencia productor ≥ 3 Años*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="cumple_experiencia" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('cumple_experiencia')">{{getErrMsg('cumple_experiencia')}}</small>
+            </div>
+
+            <div *ngIf="getControl('cumple_experiencia').value === 'Si'"
+                class="col-12 lg:col-6 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="experiencia_productor">Tiempo de experiencia*</label>
+                <p-inputNumber formControlName="experiencia_productor" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('experiencia_productor')">{{getErrMsg('experiencia_productor')}}</small>
+            </div>
+            <div *ngIf="getControl('cumple_experiencia').value === 'No' || !getControl('cumple_experiencia').value"
+                class="col-12 lg:col-6 md:col-6 sm:col-12 flex flex-column gap-2">
+            </div>
+
+
+            <div class="col-12 lg:col-4 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="hay_registros">Manejo de registros*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="hay_registros" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error" *ngIf="getCampoValido('hay_registros')">{{getErrMsg('hay_registros')}}</small>
+            </div>
+
+            <div class="col-12 lg:col-4 md:col-6 sm:col-12 flex flex-column gap-2">
+                <label for="hay_disponibilidad">Disponibilidad de tiempo y conectividad*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="hay_disponibilidad" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error"
+                    *ngIf="getCampoValido('hay_disponibilidad')">{{getErrMsg('hay_disponibilidad')}}</small>
+            </div>
+
+            <div class="col-12 lg:col-4 md:col-12 sm:col-12 flex flex-column gap-2">
+                <label for="vive_en_finca">Vive en la finca*</label>
+                <p-selectButton [options]="opciones_booleanas" formControlName="vive_en_finca" optionLabel="label"
+                    optionValue="label" />
+                <small class="p-error" *ngIf="getCampoValido('vive_en_finca')">{{getErrMsg('vive_en_finca')}}</small>
+            </div>
+
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column gap-2">
+                <label for="numero_celular">Teléfono contacto*</label>
+                <p-inputMask mask="999 999 9999" formControlName="numero_celular" placeholder="301 9999 9999" />
+                <small class="p-error" *ngIf="getCampoValido('numero_celular')">{{getErrMsg('numero_celular')}}</small>
+            </div>
+
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column gap-2">
+                <label for="email">Email*</label>
+                <input type="email" pInputText formControlName="email" />
+                <small class="p-error" *ngIf="getCampoValido('email')">{{getErrMsg('email')}}</small>
+            </div>
+
+            <div class="col-12 md:col-4 lg:col-4 flex flex-column gap-2">
+                <label for="fecha_vinculacion">Fecha de vinculación</label>
+                <p-calendar appendTo="body" formControlName="fecha_vinculacion" />
+            </div>
+
+            <div class="col-12 flex flex-column gap-2">
+                <label for="observaciones_usuario">Observaciones</label>
+                <textarea rows="2" cols="30" pInputTextarea formControlName="observaciones_usuario"></textarea>
+            </div>
+        </div>
+    </p-scrollPanel>
+
+    <div *ngIf="mode() !== 'query'" class="flex justify-content-end gap-2 mt-2">
+        <p-button label="Reiniciar" (click)="reset()" />
+        <p-button *ngIf="mode() === 'new'" label="Guardar" [disabled]="!form.valid" (click)="save()" />
+        <p-button *ngIf="mode() === 'edit'" label="Editar" [disabled]="!form.valid" (click)="edit()" />
+    </div>
+</form>

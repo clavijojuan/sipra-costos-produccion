@@ -1,0 +1,93 @@
+<!-- <app-buscar (buscar)="buscar($event)" *ngIf="buscador"></app-buscar> -->
+<div class="form-tablas mt-3 mb-5">
+    <table class="d-none d-sm-block">
+        <thead>
+            <tr>
+                <ng-container *ngFor="let titulo of tabla.titulos">
+                    <th rowspan="2">{{ titulo.alias }}</th>
+                </ng-container>
+                <th [attr.colspan]="(accionVerActivo ? 1 : 0) + (accionEditarActivo ? 1 : 0) + (accionEliminarActivo ? 1 : 0)"
+                    *ngIf="accionVerActivo || accionEditarActivo || accionEliminarActivo">Acciones</th>
+            </tr>
+            <tr>
+                <th *ngIf="accionVerActivo">Ver detalle</th>
+                <th *ngIf="accionEditarActivo">Editar</th>
+                <th *ngIf="accionEliminarActivo">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let dato of tabla.datos">
+                <tr>
+
+                    <ng-container *ngFor="let titulo of tabla.titulos">
+                        <td>
+                            <label [class]="titulo.alinear" *ngIf="titulo.tipo == undefined || titulo.tipo == null">
+                                {{ dato[titulo.clave] }}
+                            </label>
+                            <label [class]="titulo.alinear" *ngIf="titulo.tipo == 'date'">
+                                {{ dato[titulo.clave] | date }}
+                            </label>
+                            <label [class]="titulo.alinear" *ngIf="titulo.tipo == 'money'">
+                                $ {{ dato[titulo.clave] | customDecimalFormat:2 }}
+                            </label>
+                            <a target="_blank" [attr.href]="dato[titulo.clave]" [class]="titulo.alinear"
+                                *ngIf="titulo.tipo == 'link'">
+                                abrir
+                            </a>
+                        </td>
+                    </ng-container>
+                    <td *ngIf="accionVerActivo">
+                        <p class="accion">
+                            <i class="fa-solid fa-eye" (click)="consultarRegistro( dato.id || dato.objectid  )"></i>
+                        </p>
+                    </td>
+                    <td *ngIf="accionEditarActivo">
+                        <p class="accion">
+                            <i class="fa-solid fa-pencil" (click)="editarRegistro( dato.id || dato.objectid  )"></i>
+                        </p>
+                    </td>
+                    <td *ngIf="accionEliminarActivo">
+                        <p class="accion" (click)="eliminarRegistro(dato.id || dato.objectid )">
+                            <i class="fa-solid fa-trash"></i>
+                        </p>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    <!-- <div class="d-xs-block d-sm-none">
+        <ng-container *ngFor="let dato of tabla.datos">
+            <div class="row">
+                <ng-container *ngFor="let titulo of tabla.titulos">
+                    <p [class]="titulo.alinear" *ngIf="titulo.tipo == undefined || titulo.tipo == null">
+                        <sub>{{ titulo.alias + ':' }}</sub><br/>{{ dato[titulo.clave] }}
+                    </p>
+                    <p [class]="titulo.alinear" *ngIf="titulo.tipo == 'money'">
+                        <sub>{{ titulo.alias + ':' }}</sub><br/>$ {{ dato[titulo.clave] | customDecimalFormat:2 }}
+                    </p>
+                    <a target="_blank" [attr.href]="dato[titulo.clave]" [class]="titulo.alinear" *ngIf="titulo.tipo == 'link'">
+                        <sub>{{ titulo.alias + ':' }}</sub><br/>abrir
+                    </a>
+                </ng-container>
+            </div>
+            <div class="row">
+                <div class="col" *ngIf="accionVerActivo">
+                    <p class="accion">
+                        <img src="/assets/images/detalle.png" width="50"  />
+                    </p>
+                </div>
+                <div class="col" *ngIf="accionEditarActivo">
+                    <p class="accion">
+                        <img src="/assets/images/editar.png" width="50" />
+                    </p>
+                </div>
+                <div class="col" *ngIf="accionEliminarActivo">
+                    <p class="accion">
+                        <img src="/assets/images/eliminar.png" width="50" (click)="eliminarRegistro(dato.id)" />
+                    </p>
+                </div>
+            </div>
+            <hr/>
+        </ng-container>
+    </div> -->
+</div>

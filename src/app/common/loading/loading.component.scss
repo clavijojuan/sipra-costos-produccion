@@ -1,0 +1,33 @@
+.loading{
+    top:0;
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    pointer-events: none;
+}
+
+.loading-text{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.spinner {
+    border: 10px solid rgba(0,0,0, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-left-color: #3366CC;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
