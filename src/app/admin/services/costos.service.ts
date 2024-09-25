@@ -150,7 +150,7 @@ export class CostosService {
         municipio = '',
         primer_nombre_prod = '',
         primer_apellido_prod = '',
-        unidad_observacion = '',
+        nombre_unidad_obs = '',
         cultivoLabel = '',
         fecha_vinculacion = '',
         fecha = '',
@@ -160,7 +160,7 @@ export class CostosService {
       if (
         departamento?.toLowerCase().includes(keyword) ||
         municipio?.toLowerCase().includes(keyword) ||
-        unidad_observacion?.toLowerCase().includes(keyword) ||
+        nombre_unidad_obs?.toLowerCase().includes(keyword) ||
         cultivoLabel?.toLowerCase().includes(keyword) ||
         primer_nombre_prod?.toLowerCase().includes(keyword) ||
         primer_apellido_prod?.toLowerCase().includes(keyword) ||
