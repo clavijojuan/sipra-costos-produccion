@@ -1,0 +1,7 @@
+<div class="flex justify-content-between align-items-center">
+    <h3> Listado de categorias </h3>
+    <p-button label="Nueva categoria" (click)="crear()" />
+</div>
+
+<app-tablas [titulos]="titulos" [datos]="datos" [accionEliminar]="true" [accionVer]="true" [accionEditar]="true"
+    (consultar)="consultar($event)" (editar)="editar($event)" (eliminar)="eliminar($event)"></app-tablas>

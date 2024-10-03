@@ -1,0 +1,3331 @@
+{
+  "modo": "permiteNacional",
+  "modo_": "soloNacional|permiteNacional|noNacional",
+  "tieneBoton": false,
+  "labelCapa": "Capa",
+  "urlDepartamento": "https://geoservicios.upra.gov.co/arcgis/rest/services/referencia_geografica/referencia_geografica/MapServer/7",
+  "urlMunicipio": "https://geoservicios.upra.gov.co/arcgis/rest/services/referencia_geografica/referencia_geografica/MapServer/8",
+  "urlCatalogoMetadatos": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/home",
+  "urlDocumentosSoe": "https://geoservicios.upra.gov.co/arcgis/rest/services/SOE/soe_admin/MapServer/exts/Upra_Operations/consultaDocumentos",
+  "categorias": {
+    "zonificacionAptitud": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Alta",
+          "valor": "aptitud alta",
+          "color": "rgb(38,102,0)"
+        },
+        {
+          "order": 1,
+          "nombre": "Aptitud alta",
+          "valor": "aptitud alta",
+          "color": "rgb(38,102,0)"
+        },
+        {
+          "order": 2,
+          "nombre": "Media",
+          "valor": "aptitud media",
+          "color": "rgb(56,212,0)"
+        },
+        {
+          "order": 2,
+          "nombre": "Aptitud media",
+          "valor": "aptitud media",
+          "color": "rgb(56,212,0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Baja",
+          "valor": "aptitud baja",
+          "color": "rgb(233,255,190)"
+        },
+        {
+          "order": 3,
+          "nombre": "Aptitud baja",
+          "valor": "aptitud baja",
+          "color": "rgb(233,255,190)"
+        },
+        {
+          "order": 4,
+          "nombre": "Muy baja",
+          "valor": "aptitud muy baja",
+          "color": "rgb(255,255,115)"
+        },
+        {
+          "order": 4,
+          "nombre": "Aptitud muy baja",
+          "valor": "aptitud muy baja",
+          "color": "rgb(255,255,115)"
+        },
+        {
+          "order": 5,
+          "nombre": "No apta",
+          "valor": "no apta",
+          "color": "rgb(225,225,225)"
+        },
+        {
+          "order": 6,
+          "nombre": "Exclusión legal",
+          "valor": "exclusion legal",
+          "color": "rgb(130,130,130)"
+        },
+        {
+          "order": 6,
+          "nombre": "Exclusión legal",
+          "valor": "exclusión legal",
+          "color": "rgb(130,130,130)"
+        }
+      ],
+      "labelCategorias": "Aptitud",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "aptitud"
+    },
+    "agriculturaFamiliar": {
+      "labelCategorias": "Departamento",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "orderby": "area_ha desc",
+      "groupBy": "departamen",
+      "color": "rgb(112,168,0)"
+    },
+    "zidres": {
+      "labelCategorias": "Departamento",
+      "onStatisticField": "areaha",
+      "statisticType": "sum",
+      "orderby": "areaha desc",
+      "groupBy": "departamen",
+      "color": "rgb(255,0,197)"
+    },
+    "vigencias": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Municipios sin formar",
+          "valor": "municipios sin formar",
+          "color": "rgb(190,190,190)"
+        },
+        {
+          "order": 2,
+          "nombre": "1990 - 1994",
+          "valor": "1990 - 1994",
+          "color": "rgb(255,255,190)"
+        },
+        {
+          "order": 3,
+          "nombre": "1995 - 1999",
+          "valor": "1995 - 1999",
+          "color": "rgb(245,236,208)"
+        },
+        {
+          "order": 4,
+          "nombre": "2000 - 2004",
+          "valor": "2000 - 2004",
+          "color": "rgb(236,224,187)"
+        },
+        {
+          "order": 5,
+          "nombre": "2005 - 2009",
+          "valor": "2005 - 2009",
+          "color": "rgb(185,205,174)"
+        },
+        {
+          "order": 6,
+          "nombre": "2010 - 2014",
+          "valor": "2010 - 2014",
+          "color": "rgb(125,183,164)"
+        }
+      ],
+      "labelCategorias": "Vigencias catastrales",
+      "labelValor": "Número de municipios",
+      "labelPorcentaje": "Municipios [%]",
+      "onStatisticField": "rango_vigencia",
+      "statisticType": "count",
+      "groupBy": "rango_vigencia"
+    },
+    "aptitudMercadoTierras": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Incluida",
+          "valor": "incluida",
+          "color": "rgb(56,168,0)"
+        },
+        {
+          "order": 2,
+          "nombre": "Condicionada",
+          "valor": "condicionada",
+          "color": "rgb(255,255,0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Excluida",
+          "valor": "excluida",
+          "color": "rgb(225,225,225)"
+        }
+      ],
+      "labelCategorias": "Aptitud del mercado de tierras rurales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "categoria_mtv10"
+    },
+    "precios": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Menor a 1",
+          "valor": "menor a 1",
+          "color": "#ffff91"
+        },
+        {
+          "order": 2,
+          "nombre": "Mayor a 1 - hasta 2",
+          "valor": "mayor a 1 - hasta 2",
+          "color": "#f0e773"
+        },
+        {
+          "order": 3,
+          "nombre": "Mayor a 2 - hasta 3",
+          "valor": "mayor a 2 - hasta 3",
+          "color": "#e0d055"
+        },
+        {
+          "order": 4,
+          "nombre": "Mayor a 3 - hasta 5",
+          "valor": "mayor a 3 - hasta 5",
+          "color": "#d1b63d"
+        },
+        {
+          "order": 5,
+          "nombre": "Mayor a 5 - hasta 8",
+          "valor": "mayor a 5 - hasta 8",
+          "color": "#c49f25"
+        },
+        {
+          "order": 6,
+          "nombre": "Mayor a 8 - hasta 10",
+          "valor": "mayor a 8 - hasta 10",
+          "color": "#a87d11"
+        },
+        {
+          "order": 7,
+          "nombre": "Mayor a 10 - hasta 15",
+          "valor": "mayor a 10 - hasta 15",
+          "color": "#946300"
+        },
+        {
+          "order": 8,
+          "nombre": "Mayor a 15 - hasta 20",
+          "valor": "mayor a 15 - hasta 20",
+          "color": "#f2b2ac"
+        },
+        {
+          "order": 9,
+          "nombre": "Mayor a 20 - hasta 30",
+          "valor": "mayor a 20 - hasta 30",
+          "color": "#eb9b94"
+        },
+        {
+          "order": 10,
+          "nombre": "Mayor a 30 - hasta 40",
+          "valor": "mayor a 30 - hasta 40",
+          "color": "#e3857d"
+        },
+        {
+          "order": 11,
+          "nombre": "Mayor a 40 - hasta 50",
+          "valor": "mayor a 40 - hasta 50",
+          "color": "#db6f65"
+        },
+        {
+          "order": 12,
+          "nombre": "Mayor a 50 - hasta 60",
+          "valor": "mayor a 50 - hasta 60",
+          "color": "#d65e54"
+        },
+        {
+          "order": 13,
+          "nombre": "Mayor a 60 - hasta 70",
+          "valor": "mayor a 60 - hasta 70",
+          "color": "#cf4c40"
+        },
+        {
+          "order": 14,
+          "nombre": "Mayor a 70 - hasta 80",
+          "valor": "mayor a 70 - hasta 80",
+          "color": "#e9bfff"
+        },
+        {
+          "order": 15,
+          "nombre": "Mayor a 80 - hasta 100",
+          "valor": "mayor a 80 - hasta 100",
+          "color": "#e299ff"
+        },
+        {
+          "order": 16,
+          "nombre": "Mayor a 100 - hasta 120",
+          "valor": "mayor a 100 - hasta 120",
+          "color": "#e173ff"
+        },
+        {
+          "order": 17,
+          "nombre": "Mayor a 120 - hasta 140",
+          "valor": "mayor a 120 - hasta 140",
+          "color": "#e552ff"
+        },
+        {
+          "order": 18,
+          "nombre": "Mayor a 140 - hasta 160",
+          "valor": "mayor a 140 - hasta 160",
+          "color": "#de00ff"
+        },
+        {
+          "order": 19,
+          "nombre": "Mayor a 160 - hasta 180",
+          "valor": "mayor a 160 - hasta 180",
+          "color": "#b900ff"
+        },
+        {
+          "order": 20,
+          "nombre": "Mayor a 180 - hasta 200",
+          "valor": "mayor a 180 - hasta 200",
+          "color": "#c0eda6"
+        },
+        {
+          "order": 21,
+          "nombre": "Mayor a 200 - hasta 250",
+          "valor": "mayor a 200 - hasta 250",
+          "color": "#a6d485"
+        },
+        {
+          "order": 22,
+          "nombre": "Mayor a 250 - hasta 300",
+          "valor": "mayor a 250 - hasta 300",
+          "color": "#8eba65"
+        },
+        {
+          "order": 23,
+          "nombre": "Mayor a 300 - hasta 350",
+          "valor": "mayor a 300 - hasta 350",
+          "color": "#75a143"
+        },
+        {
+          "order": 24,
+          "nombre": "Mayor a 1200 - hasta 1400",
+          "valor": "mayor a 1200 - hasta 1400",
+          "color": "#618a28"
+        },
+        {
+          "order": 25,
+          "nombre": "Mayor a 2200 - hasta 2600",
+          "valor": "mayor a 2200 - hasta 2600",
+          "color": "#4d7300"
+        },
+        {
+          "order": 26,
+          "nombre": "Cuerpos de Agua",
+          "valor": "cuerpos de agua",
+          "color": "#00c5ff"
+        },
+        {
+          "order": 27,
+          "nombre": "No suelo",
+          "valor": "no suelo",
+          "color": "#000000"
+        },
+        {
+          "order": 28,
+          "nombre": "Sin Información",
+          "valor": "sin informacion",
+          "color": "#ffffff"
+        },
+        {
+          "order": 29,
+          "nombre": "Zona Urbana",
+          "valor": "zona urbana",
+          "color": "#ff5500"
+        }
+      ],
+      "labelCategorias": "Rangos de precios (en millones de $ por ha)",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "rango_precios"
+    },
+    "fisico_codigo": {
+      "label": "Código zonificación física",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Zona Urbana",
+          "valor": "zona urbana",
+          "color": "rgba(255,85,0,1)"
+        },
+        {
+          "order": 2,
+          "nombre": "No Suelo",
+          "valor": "no suelo",
+          "color": "rgba(0,0,0,1)"
+        },
+        {
+          "order": 3,
+          "nombre": "Cuerpo de Agua",
+          "valor": "cuerpo de agua",
+          "color": "rgba(0,197,255,1)"
+        },
+        {
+          "order": 4,
+          "nombre": "1  Extremadamente frío (Páramo alto), VII-VIII, >75%",
+          "valor": "1",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 5,
+          "nombre": "2 Muy frío (Páramo bajo), VII-VIII, >75%",
+          "valor": "2",
+          "color": "rgba(0,32,96,1)"
+        },
+        {
+          "order": 6,
+          "nombre": "3 Frío, VII-VIII, >75%",
+          "valor": "3",
+          "color": "rgba(0,51,0,1)"
+        },
+        {
+          "order": 7,
+          "nombre": "4 Templado, VII-VIII, >75%",
+          "valor": "4",
+          "color": "rgba(131,60,12,1)"
+        },
+        {
+          "order": 8,
+          "nombre": "5 Cálido, VII-VIII, >75%",
+          "valor": "5",
+          "color": "rgba(128,0,0,1)"
+        },
+        {
+          "order": 9,
+          "nombre": "6 Subnival y Nival, VII-VIII, >75%",
+          "valor": "6",
+          "color": "rgba(64,128,108,1)"
+        },
+        {
+          "order": 10,
+          "nombre": "7  Extremadamente frío (Páramo alto), VII-VIII, 50-75%",
+          "valor": "7",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 11,
+          "nombre": "8 Muy frío (Páramo bajo), VII-VIII, 50-75%",
+          "valor": "8",
+          "color": "rgba(0,32,96,1)"
+        },
+        {
+          "order": 12,
+          "nombre": "9 Frío, VII-VIII, 50-75%",
+          "valor": "9",
+          "color": "rgba(0,51,0,1)"
+        },
+        {
+          "order": 13,
+          "nombre": "10 Templado, VII-VIII, 50-75%",
+          "valor": "10",
+          "color": "rgba(131,60,12,1)"
+        },
+        {
+          "order": 14,
+          "nombre": "11 Cálido, VII-VIII, 50-75%",
+          "valor": "11",
+          "color": "rgba(128,0,0,1)"
+        },
+        {
+          "order": 15,
+          "nombre": "12 Subnival y Nival, VII-VIII, 50-75%",
+          "valor": "12",
+          "color": "rgba(64,128,108,1)"
+        },
+        {
+          "order": 16,
+          "nombre": "13  Extremadamente frío (Páramo alto), VII-VIII, 25-50%",
+          "valor": "13",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 17,
+          "nombre": "14 Muy frío (Páramo bajo), VII-VIII, 25-50%",
+          "valor": "14",
+          "color": "rgba(32,55,100,1)"
+        },
+        {
+          "order": 18,
+          "nombre": "15 Frío, VII-VIII, 25-50%",
+          "valor": "15",
+          "color": "rgba(55,86,35,1)"
+        },
+        {
+          "order": 19,
+          "nombre": "16 Templado, VII-VIII, 25-50%",
+          "valor": "16",
+          "color": "rgba(128,96,0,1)"
+        },
+        {
+          "order": 20,
+          "nombre": "17 Cálido, VII-VIII, 25-50%",
+          "valor": "17",
+          "color": "rgba(128,0,128,1)"
+        },
+        {
+          "order": 21,
+          "nombre": "18 Subnival y Nival, VII-VIII, 25-50%",
+          "valor": "18",
+          "color": "rgba(64,128,108,1)"
+        },
+        {
+          "order": 22,
+          "nombre": "19  Extremadamente frío (Páramo alto), VII-VIII, <25%",
+          "valor": "19",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 23,
+          "nombre": "20 Muy frío (Páramo bajo), VII-VIII, <25%",
+          "valor": "20",
+          "color": "rgba(31,78,120,1)"
+        },
+        {
+          "order": 24,
+          "nombre": "21 Frío, VII-VIII, <25%",
+          "valor": "21",
+          "color": "rgba(0,102,0,1)"
+        },
+        {
+          "order": 25,
+          "nombre": "22 Templado, VII-VIII, <25%",
+          "valor": "22",
+          "color": "rgba(198,89,17,1)"
+        },
+        {
+          "order": 26,
+          "nombre": "23 Cálido, VII-VIII, <25%",
+          "valor": "23",
+          "color": "rgba(102,0,51,1)"
+        },
+        {
+          "order": 27,
+          "nombre": "24 Subnival y Nival, VII-VIII, <25%",
+          "valor": "24",
+          "color": "rgba(64,128,108,1)"
+        },
+        {
+          "order": 28,
+          "nombre": "25 Muy frío (Páramo bajo), VI, >75%",
+          "valor": "25",
+          "color": "rgba(48,84,150,1)"
+        },
+        {
+          "order": 29,
+          "nombre": "26 Frío, VI, >75%",
+          "valor": "26",
+          "color": "rgba(51,102,0,1)"
+        },
+        {
+          "order": 30,
+          "nombre": "27 Templado, VI, >75%",
+          "valor": "27",
+          "color": "rgba(255,153,51,1)"
+        },
+        {
+          "order": 31,
+          "nombre": "28 Cálido, VI, >75%",
+          "valor": "28",
+          "color": "rgba(204,51,153,1)"
+        },
+        {
+          "order": 32,
+          "nombre": "29 Muy frío (Páramo bajo), VI, 50-75%",
+          "valor": "29",
+          "color": "rgba(48,84,150,1)"
+        },
+        {
+          "order": 33,
+          "nombre": "30 Frío, VI, 50-75%",
+          "valor": "30",
+          "color": "rgba(51,102,0,1)"
+        },
+        {
+          "order": 34,
+          "nombre": "31 Templado, VI, 50-75%",
+          "valor": "31",
+          "color": "rgba(255,153,51,1)"
+        },
+        {
+          "order": 35,
+          "nombre": "32 Cálido, VI, 50-75%",
+          "valor": "32",
+          "color": "rgba(204,51,153,1)"
+        },
+        {
+          "order": 36,
+          "nombre": "33 Extremadamente frío (Páramo alto), VI, 50-75%",
+          "valor": "33",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 37,
+          "nombre": "34 Extremadamente frío (Páramo alto), VI, 25-50%",
+          "valor": "34",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 38,
+          "nombre": "35 Muy frío (Páramo bajo), VI, 25-50%",
+          "valor": "35",
+          "color": "rgba(48,84,150,1)"
+        },
+        {
+          "order": 39,
+          "nombre": "36 Frío, VI, 25-50%",
+          "valor": "36",
+          "color": "rgba(0,128,0,1)"
+        },
+        {
+          "order": 40,
+          "nombre": "37 Templado, VI, 25-50%",
+          "valor": "37",
+          "color": "rgba(255,153,0,1)"
+        },
+        {
+          "order": 41,
+          "nombre": "38 Cálido, VI, 25-50%",
+          "valor": "38",
+          "color": "rgba(153,0,153,1)"
+        },
+        {
+          "order": 42,
+          "nombre": "39  Extremadamente frío (Páramo alto), VI, <25%",
+          "valor": "39",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 43,
+          "nombre": "40 Muy frío (Páramo bajo), VI, <25%",
+          "valor": "40",
+          "color": "rgba(47,117,181,1)"
+        },
+        {
+          "order": 44,
+          "nombre": "41 Frío, VI, <25%",
+          "valor": "41",
+          "color": "rgba(51,153,51,1)"
+        },
+        {
+          "order": 45,
+          "nombre": "42 Templado, VI, <25%",
+          "valor": "42",
+          "color": "rgba(178,145,26,1)"
+        },
+        {
+          "order": 46,
+          "nombre": "43 Cálido, VI, <25%",
+          "valor": "43",
+          "color": "rgba(153,0,204,1)"
+        },
+        {
+          "order": 47,
+          "nombre": "44 Cálido, V, >75%",
+          "valor": "44",
+          "color": "rgba(204,0,204,1)"
+        },
+        {
+          "order": 48,
+          "nombre": "45 Muy frío (Páramo bajo), V, 50-75%",
+          "valor": "45",
+          "color": "rgba(142,169,219,1)"
+        },
+        {
+          "order": 49,
+          "nombre": "46 Frío, V, 50-75%",
+          "valor": "46",
+          "color": "rgba(51,153,51,1)"
+        },
+        {
+          "order": 50,
+          "nombre": "47 Templado, V, 50-75%",
+          "valor": "47",
+          "color": "rgba(244,176,132,1)"
+        },
+        {
+          "order": 51,
+          "nombre": "48 Cálido, V, 50-75%",
+          "valor": "48",
+          "color": "rgba(204,0,204,1)"
+        },
+        {
+          "order": 52,
+          "nombre": "49 Muy frío (Páramo bajo), V, 25-50%",
+          "valor": "49",
+          "color": "rgba(142,169,219,1)"
+        },
+        {
+          "order": 53,
+          "nombre": "50 Frío, V, 25-50%",
+          "valor": "50",
+          "color": "rgba(51,153,51,1)"
+        },
+        {
+          "order": 54,
+          "nombre": "51 Templado, V, 25-50%",
+          "valor": "51",
+          "color": "rgba(244,176,132,1)"
+        },
+        {
+          "order": 55,
+          "nombre": "52 Cálido, V, 25-50%",
+          "valor": "52",
+          "color": "rgba(204,0,204,1)"
+        },
+        {
+          "order": 56,
+          "nombre": "53 Muy frío (Páramo bajo), V, <25%",
+          "valor": "53",
+          "color": "rgba(142,169,219,1)"
+        },
+        {
+          "order": 57,
+          "nombre": "54 Frío, V, <25%",
+          "valor": "54",
+          "color": "rgba(51,153,51,1)"
+        },
+        {
+          "order": 58,
+          "nombre": "55 Templado, V, <25%",
+          "valor": "55",
+          "color": "rgba(255,204,0,1)"
+        },
+        {
+          "order": 59,
+          "nombre": "56 Cálido, V, <25%",
+          "valor": "56",
+          "color": "rgba(102,0,255,1)"
+        },
+        {
+          "order": 60,
+          "nombre": "57 Muy frío (Páramo bajo), IV, >75%",
+          "valor": "57",
+          "color": "rgba(155,194,230,1)"
+        },
+        {
+          "order": 61,
+          "nombre": "58 Frío, IV, >75%",
+          "valor": "58",
+          "color": "rgba(0,204,0,1)"
+        },
+        {
+          "order": 62,
+          "nombre": "59 Templado, IV, >75%",
+          "valor": "59",
+          "color": "rgba(255,217,102,1)"
+        },
+        {
+          "order": 63,
+          "nombre": "60 Cálido, IV, >75%",
+          "valor": "60",
+          "color": "rgba(153,51,255,1)"
+        },
+        {
+          "order": 64,
+          "nombre": "61 Muy frío (Páramo bajo), IV, 50-75%",
+          "valor": "61",
+          "color": "rgba(155,194,230,1)"
+        },
+        {
+          "order": 65,
+          "nombre": "62 Frío, IV, 50-75%",
+          "valor": "62",
+          "color": "rgba(0,204,0,1)"
+        },
+        {
+          "order": 66,
+          "nombre": "63 Templado, IV, 50-75%",
+          "valor": "63",
+          "color": "rgba(255,217,102,1)"
+        },
+        {
+          "order": 67,
+          "nombre": "64 Cálido, IV, 50-75%",
+          "valor": "64",
+          "color": "rgba(153,51,255,1)"
+        },
+        {
+          "order": 68,
+          "nombre": "65 Muy frío (Páramo bajo), IV, 25-50%",
+          "valor": "65",
+          "color": "rgba(155,194,230,1)"
+        },
+        {
+          "order": 69,
+          "nombre": "66 Frío, IV, 25-50%",
+          "valor": "66",
+          "color": "rgba(0,204,0,1)"
+        },
+        {
+          "order": 70,
+          "nombre": "67 Templado, IV, 25-50%",
+          "valor": "67",
+          "color": "rgba(248,203,173,1)"
+        },
+        {
+          "order": 71,
+          "nombre": "68 Cálido, IV, 25-50%",
+          "valor": "68",
+          "color": "rgba(204,102,255,1)"
+        },
+        {
+          "order": 72,
+          "nombre": "69 Extremadamente frío (Páramo alto), IV, 25-50%",
+          "valor": "69",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 73,
+          "nombre": "70 Muy frío (Páramo bajo), IV, <25%",
+          "valor": "70",
+          "color": "rgba(180,198,231,1)"
+        },
+        {
+          "order": 74,
+          "nombre": "71 Frío, IV, <25%",
+          "valor": "71",
+          "color": "rgba(0,204,102,1)"
+        },
+        {
+          "order": 75,
+          "nombre": "72 Templado, IV, <25%",
+          "valor": "72",
+          "color": "rgba(252,228,214,1)"
+        },
+        {
+          "order": 76,
+          "nombre": "73 Cálido, IV, <25%",
+          "valor": "73",
+          "color": "rgba(255,102,255,1)"
+        },
+        {
+          "order": 77,
+          "nombre": "74 Extremadamente frío (Páramo alto), IV, <25%",
+          "valor": "74",
+          "color": "rgba(77,149,161,1)"
+        },
+        {
+          "order": 78,
+          "nombre": "75 Muy frío (Páramo bajo), III, >75%",
+          "valor": "75",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 79,
+          "nombre": "76 Frío, III, >75%",
+          "valor": "76",
+          "color": "rgba(169,208,142,1)"
+        },
+        {
+          "order": 80,
+          "nombre": "77 Cálido, III, >75%",
+          "valor": "77",
+          "color": "rgba(255,153,204,1)"
+        },
+        {
+          "order": 81,
+          "nombre": "78 Templado, III, >75%",
+          "valor": "78",
+          "color": "rgba(255,230,153,1)"
+        },
+        {
+          "order": 82,
+          "nombre": "79 Frío, III, 50-75%",
+          "valor": "79",
+          "color": "rgba(169,208,142,1)"
+        },
+        {
+          "order": 83,
+          "nombre": "80 Templado, III, 50-75%",
+          "valor": "80",
+          "color": "rgba(255,230,153,1)"
+        },
+        {
+          "order": 84,
+          "nombre": "81 Cálido, III, 50-75%",
+          "valor": "81",
+          "color": "rgba(255,153,204,1)"
+        },
+        {
+          "order": 85,
+          "nombre": "82 Muy frío (Páramo bajo), III, 50-75%",
+          "valor": "82",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 86,
+          "nombre": "83 Muy frío (Páramo bajo), III, 25-50%",
+          "valor": "83",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 87,
+          "nombre": "84 Frío, III, 25-50%",
+          "valor": "84",
+          "color": "rgba(169,208,142,1)"
+        },
+        {
+          "order": 88,
+          "nombre": "85 Templado, III, 25-50%",
+          "valor": "85",
+          "color": "rgba(255,230,153,1)"
+        },
+        {
+          "order": 89,
+          "nombre": "86 Cálido, III, 25-50%",
+          "valor": "86",
+          "color": "rgba(255,153,204,1)"
+        },
+        {
+          "order": 90,
+          "nombre": "87  Muy frío (Páramo bajo), III, <25%",
+          "valor": "87",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 91,
+          "nombre": "88 Frío, III, <25%",
+          "valor": "88",
+          "color": "rgba(198,224,180,1)"
+        },
+        {
+          "order": 92,
+          "nombre": "89 Templado, III, <25%",
+          "valor": "89",
+          "color": "rgba(255,230,153,1)"
+        },
+        {
+          "order": 93,
+          "nombre": "90 Cálido, III, <25%",
+          "valor": "90",
+          "color": "rgba(255,153,255,1)"
+        },
+        {
+          "order": 94,
+          "nombre": "91  Muy frío (Páramo bajo), II, 25-50%",
+          "valor": "91",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 95,
+          "nombre": "92 Frío, II, 25-50%",
+          "valor": "92",
+          "color": "rgba(226,239,218,1)"
+        },
+        {
+          "order": 96,
+          "nombre": "93 Templado, II, 25-50%",
+          "valor": "93",
+          "color": "rgba(255,255,204,1)"
+        },
+        {
+          "order": 97,
+          "nombre": "94 Cálido, II, 25-50%",
+          "valor": "94",
+          "color": "rgba(255,204,255,1)"
+        },
+        {
+          "order": 98,
+          "nombre": "95  Muy frío (Páramo bajo), II, <25%",
+          "valor": "95",
+          "color": "rgba(189,215,238,1)"
+        },
+        {
+          "order": 99,
+          "nombre": "96 Frío, II, <25%",
+          "valor": "96",
+          "color": "rgba(226,239,218,1)"
+        },
+        {
+          "order": 100,
+          "nombre": "97 Templado, II, <25%",
+          "valor": "97",
+          "color": "rgba(255,255,204,1)"
+        },
+        {
+          "order": 101,
+          "nombre": "98 Cálido, II, <25%",
+          "valor": "98",
+          "color": "rgba(255,204,255,1)"
+        }
+      ],
+      "labelCategorias": "Código zonificación física",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "codigo_zf"
+    },
+    "fisico_pendiente": {
+      "label": "Pendiente",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "<25%",
+          "valor": "<25%",
+          "color": "rgb(237,248,251)"
+        },
+        {
+          "order": 2,
+          "nombre": "25-50%",
+          "valor": "25-50%",
+          "color": "rgb(178,226,226)"
+        },
+        {
+          "order": 3,
+          "nombre": "50-75%",
+          "valor": "50-75%",
+          "color": "rgb(102,194,164)"
+        },
+        {
+          "order": 4,
+          "nombre": ">75%",
+          "valor": ">75%",
+          "color": "rgb(35,139,69)"
+        },
+        {
+          "order": 5,
+          "nombre": "N.A.",
+          "valor": "n.a",
+          "color": "rgb(0,0,0)"
+        }
+      ],
+      "labelCategorias": "Pendiente zonificación física",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "pendiente"
+    },
+    "fisico_pisoTermico": {
+      "label": "Piso térmico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Cálido",
+          "valor": "cálido",
+          "color": "rgb(215,25,28)"
+        },
+        {
+          "order": 2,
+          "nombre": "Templado",
+          "valor": "templado",
+          "color": "rgb(253,174,97)"
+        },
+        {
+          "order": 3,
+          "nombre": "Frío",
+          "valor": "frío",
+          "color": "rgb(171,217,233)"
+        },
+        {
+          "order": 4,
+          "nombre": "Muy frío (Páramo bajo)",
+          "valor": "muy frío (páramo bajo)",
+          "color": "rgb(44,123,182)"
+        }
+      ],
+      "labelCategorias": "Piso térmico zonificación física",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "piso_termico"
+    },
+    "fisico_claseAgrologica": {
+      "label": "Clase agrológica",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "II",
+          "valor": "ii",
+          "color": "rgb(166,206,227)"
+        },
+        {
+          "order": 2,
+          "nombre": "III",
+          "valor": "iii",
+          "color": "rgb(31,120,180)"
+        },
+        {
+          "order": 3,
+          "nombre": "IV",
+          "valor": "iv",
+          "color": "rgb(178,223,138)"
+        },
+        {
+          "order": 4,
+          "nombre": "V",
+          "valor": "v",
+          "color": "rgb(51,160,44)"
+        },
+        {
+          "order": 5,
+          "nombre": "VI",
+          "valor": "vi",
+          "color": "rgb(251,154,153)"
+        },
+        {
+          "order": 6,
+          "nombre": "VII-VIII",
+          "valor": "vii-viii",
+          "color": "rgb(227,26,28)"
+        },
+        {
+          "order": 7,
+          "nombre": "Cuerpo de Agua",
+          "valor": "ca",
+          "color": "rgb(253,191,111)"
+        },
+        {
+          "order": 8,
+          "nombre": "Zona Urbana",
+          "valor": "zu",
+          "color": "rgb(255,127,0)"
+        },
+        {
+          "order": 9,
+          "nombre": "No Suelo",
+          "valor": "no suelo",
+          "color": "rgb(202,178,214)"
+        }
+      ],
+      "labelCategorias": "Clase Agrológica zonificación física",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "clase_agrologica"
+    },
+    "UFH": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "01. (85-100)",
+          "valor": "01",
+          "color": "rgb(66,40,140)"
+        },
+        {
+          "order": 2,
+          "nombre": "02. (77-84)",
+          "valor": "02",
+          "color": "rgb(0,92,230)"
+        },
+        {
+          "order": 3,
+          "nombre": "03. (70-76)",
+          "valor": "03",
+          "color": "rgb(0,169,230)"
+        },
+        {
+          "order": 4,
+          "nombre": "04. (64-69)",
+          "valor": "04",
+          "color": "rgb(0,255,255)"
+        },
+        {
+          "order": 5,
+          "nombre": "05. (59-63)",
+          "valor": "05",
+          "color": "rgb(38,102,0)"
+        },
+        {
+          "order": 6,
+          "nombre": "06. (53-58)",
+          "valor": "06",
+          "color": "rgb(56,212,0)"
+        },
+        {
+          "order": 7,
+          "nombre": "07. (47-52)",
+          "valor": "07",
+          "color": "rgb(170,255,0)"
+        },
+        {
+          "order": 8,
+          "nombre": "08. (41-46)",
+          "valor": "08",
+          "color": "rgb(255,242,156)"
+        },
+        {
+          "order": 9,
+          "nombre": "09. (35-40)",
+          "valor": "09",
+          "color": "rgb(255,255,0)"
+        },
+        {
+          "order": 10,
+          "nombre": "10. (27-34)",
+          "valor": "10",
+          "color": "rgb(255,140,60)"
+        },
+        {
+          "order": 11,
+          "nombre": "11. (19-26)",
+          "valor": "11",
+          "color": "rgb(255,79,127)"
+        },
+        {
+          "order": 12,
+          "nombre": "12. (11-18)",
+          "valor": "12",
+          "color": "rgb(141,73,37)"
+        },
+        {
+          "order": 13,
+          "nombre": "13. (<11)",
+          "valor": "13",
+          "color": "rgb(71,54,38)"
+        },
+        {
+          "order": 14,
+          "nombre": "CA",
+          "valor": "CA",
+          "color": "rgb(255,255,255)"
+        },
+        {
+          "order": 15,
+          "nombre": "MR",
+          "valor": "MR",
+          "color": "rgb(255,255,255)"
+        },
+        {
+          "order": 16,
+          "nombre": "No suelo",
+          "valor": "No suelo",
+          "color": "rgb(255,255,255)"
+        },
+        {
+          "order": 17,
+          "nombre": "ZU",
+          "valor": "ZU",
+          "color": "rgb(255,255,255)"
+        }
+      ],
+      "labelCategorias": "Clase",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "clase_ufh"
+    },
+    "fronteraAgricola": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Frontera agrícola nacional",
+          "valor": "frontera agricola nacional",
+          "color": "rgb(38,115,0)"
+        },
+        {
+          "order": 2,
+          "nombre": "Bosques naturales y áreas no agropecuarias",
+          "valor": "bosques naturales y áreas no agropecuarias",
+          "color": "rgb(225, 225, 225)"
+        },
+        {
+          "order": 3,
+          "nombre": "Exclusiones legales",
+          "valor": "exclusiones legales",
+          "color": "rgb(130, 130, 130)"
+        }
+      ],
+      "labelCategorias": "Categoría",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "elemento"
+    },
+    "areasDisponiblesAgroforestal": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Sin restricción",
+          "valor": "sin restriccion",
+          "color": "rgb(137, 205, 102)"
+        },
+        {
+          "order": 2,
+          "nombre": "Condicionante",
+          "valor": "condicionante",
+          "color": "rgb(255, 255, 115)"
+        },
+        {
+          "order": 3,
+          "nombre": "Restricción legal",
+          "valor": "restriccion legal",
+          "color": "rgb(255, 0, 0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Restricción legal marina",
+          "valor": "restriccion legal marina",
+          "color": "rgb(255, 0, 0)"
+        }
+      ],
+      "labelCategorias": "Tipo de zona",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "tipo_zona"
+    },
+    "irrigacion": {
+      "label": "Tipo tierras",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "TIPO 1 - Irrigables para la mayoría de métodos de irrigación",
+          "valor": "tipo 1 - irrigables para la mayoría de métodos de irrigación",
+          "color": "rgba(11,11,145,1)"
+        },
+        {
+          "order": 2,
+          "nombre": "TIPO 2 - Irrigables con especificaciones particulares para riegos por superficie",
+          "valor": "tipo 2 - irrigables con especificaciones particulares para riegos por superficie",
+          "color": "rgba(0,95,255,1)"
+        },
+        {
+          "order": 3,
+          "nombre": "TIPO 3 - Irrigables con especificaciones de riego especializadas",
+          "valor": "tipo 3 - irrigables con especificaciones de riego especializadas",
+          "color": "rgba(0,178,255,1)"
+        },
+        {
+          "order": 4,
+          "nombre": "TIPO 4 - Irrigable con altas especificaciones y limitaciones",
+          "valor": "tipo 4 - irrigable con altas especificaciones y limitaciones",
+          "color": "rgba(69,199,240,1)"
+        },
+        {
+          "order": 5,
+          "nombre": "TIPO 5 - Irrigable para sistemas de riego de elevada eficiencia presurizados",
+          "valor": "tipo 5 - irrigable para sistemas de riego de elevada eficiencia presurizados",
+          "color": "rgba(187,231,252,1)"
+        },
+        {
+          "order": 6,
+          "nombre": "Fuera de Frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgba(225, 225, 225, 1)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "tipo_tierras"
+    },
+    "irrigacion_ecosistemico": {
+      "label": "Ecosistémico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "A1 Alta",
+          "valor": "a1_alta",
+          "color": "rgb(38, 115, 0)"
+        },
+        {
+          "order": 2,
+          "nombre": "A2 Moderada",
+          "valor": "a2_moderada",
+          "color": "rgb(119, 181, 91)"
+        },
+        {
+          "order": 3,
+          "nombre": "A3 Baja",
+          "valor": "a3_baja",
+          "color": "rgb(211, 255, 191)"
+        },
+        {
+          "order": 4,
+          "nombre": "Fuera de frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "ecosistemico"
+    },
+    "irrigacion_fisico": {
+      "label": "Físico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "1",
+          "valor": "1",
+          "color": "rgb(68, 101, 137)"
+        },
+        {
+          "order": 2,
+          "nombre": "2",
+          "valor": "2",
+          "color": "rgb(102, 153, 205)"
+        },
+        {
+          "order": 3,
+          "nombre": "3",
+          "valor": "3",
+          "color": "rgb(159, 205, 245)"
+        },
+        {
+          "order": 4,
+          "nombre": "4",
+          "valor": "4",
+          "color": "rgb(143, 227, 224)"
+        },
+        {
+          "order": 5,
+          "nombre": "5",
+          "valor": "5",
+          "color": "rgb(99, 255, 219)"
+        },
+        {
+          "order": 6,
+          "nombre": "0",
+          "valor": "0",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "fisico"
+    },
+    "irrigacion_socioeconomico": {
+      "label": "Socioeconómico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Q1",
+          "valor": "q1",
+          "color": "rgb(156, 85, 31)"
+        },
+        {
+          "order": 2,
+          "nombre": "Q2",
+          "valor": "q2",
+          "color": "rgb(224, 192, 128)"
+        },
+        {
+          "order": 3,
+          "nombre": "Q3",
+          "valor": "q3",
+          "color": "rgb(183, 212, 178)"
+        },
+        {
+          "order": 4,
+          "nombre": "Q4",
+          "valor": "q4",
+          "color": "rgb(36, 131, 145)"
+        },
+        {
+          "order": 5,
+          "nombre": "Fuera de frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "socioeconomico"
+    },
+    "irrigacion_disponibilidad_recurso_hidrico": {
+      "label": "Disponibilidad recurso hídrico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "D1 Alta",
+          "valor": "d1_alta",
+          "color": "rgb(254,240,217)"
+        },
+        {
+          "order": 2,
+          "nombre": "D2 Moderada",
+          "valor": "d2_moderada",
+          "color": "rgb(253,204,138)"
+        },
+        {
+          "order": 3,
+          "nombre": "D3 Baja",
+          "valor": "d3_baja",
+          "color": "rgb(252,141,89)"
+        },
+        {
+          "order": 4,
+          "nombre": "D4 Crítica",
+          "valor": "d4_critica",
+          "color": "rgb(215,48,31)"
+        },
+        {
+          "order": 5,
+          "nombre": "Fuera de Frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "disponibilidad_recurso_hidrico"
+    },
+    "irrigacion_necesidad_recurso_hidrico": {
+      "label": "Necesidad de recurso hídrico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "N1 Alta",
+          "valor": "n1_alta",
+          "color": "rgb(223, 242, 218)"
+        },
+        {
+          "order": 2,
+          "nombre": "N2 Moderada",
+          "valor": "n2_moderada",
+          "color": "rgb(153, 201, 165)"
+        },
+        {
+          "order": 3,
+          "nombre": "N3 Baja",
+          "valor": "n3_baja",
+          "color": "rgb(66, 161, 201)"
+        },
+        {
+          "order": 4,
+          "nombre": "Fuera de frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "necesidad_recurso_hidrico"
+    },
+    "irrigacion_regulacion_recurso_hidrico": {
+      "label": "Regulación de recurso hídrico",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "R1 Alta",
+          "valor": "r1_alta",
+          "color": "rgb(255, 238, 161)"
+        },
+        {
+          "order": 2,
+          "nombre": "R2 Moderada",
+          "valor": "r2_moderada",
+          "color": "rgb(255, 178, 77)"
+        },
+        {
+          "order": 3,
+          "nombre": "R3 Baja",
+          "valor": "r3_baja",
+          "color": "rgb(240, 105, 84)"
+        },
+        {
+          "order": 4,
+          "nombre": "Fuera de frontera agrícola",
+          "valor": "fuera de frontera",
+          "color": "rgb(225, 225, 225)"
+        }
+      ],
+      "labelCategorias": "Áreas potenciales",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "regulacion_recurso_hidrico"
+    },
+    "avaluos_catastrales": {
+      "label": "avaluos_catastrales_6180",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Menor a 1",
+          "valor": "Menor a 1",
+          "color": "rgba(255,190,190,1)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mayor a 1 - hasta 2.3",
+          "valor": "Mayor a 1 - hasta 2.3",
+          "color": "rgba(255,235,175,1)"
+        },
+        {
+          "order": 3,
+          "nombre": "Mayor a 1 - hasta 2.3",
+          "valor": "Mayor a 1 - hasta 2.3",
+          "color": "rgba(255,235,175,1)"
+        },
+        {
+          "order": 4,
+          "nombre": "Mayor a 2.3 - hasta 4.8",
+          "valor": "Mayor a 2.3 - hasta 4.8",
+          "color": "rgba(237,194,110,1)"
+        },
+        {
+          "order": 5,
+          "nombre": "Mayor a 2.3 - hasta 4.8",
+          "valor": "Mayor a 2.3 - hasta 4.8",
+          "color": "rgba(237,194,110,1)"
+        },
+        {
+          "order": 6,
+          "nombre": "Mayor a 4.8 - hasta 10",
+          "valor": "Mayor a 4.8 - hasta 10",
+          "color": "rgba(255,170,0,1)"
+        },
+        {
+          "order": 7,
+          "nombre": "Mayor a 4.8 - hasta 10",
+          "valor": "Mayor a 4.8 - hasta 10",
+          "color": "rgba(255,170,0,1)"
+        },
+        {
+          "order": 8,
+          "nombre": "Mayor a 10 - hasta 22.1",
+          "valor": "Mayor a 10 - hasta 22.1",
+          "color": "rgba(165,245,122,1)"
+        },
+        {
+          "order": 9,
+          "nombre": "Mayor a 10 - hasta 22.1",
+          "valor": "Mayor a 10 - hasta 22.1",
+          "color": "rgba(165,245,122,1)"
+        },
+        {
+          "order": 10,
+          "nombre": "Mayor a 22.1 - hasta 58.4",
+          "valor": "Mayor a 22.1 - hasta 58.4",
+          "color": "rgba(137,205,102,1)"
+        },
+        {
+          "order": 11,
+          "nombre": "Mayor a 22.1 - hasta 58.4",
+          "valor": "Mayor a 22.1 - hasta 58.4",
+          "color": "rgba(137,205,102,1)"
+        },
+        {
+          "order": 12,
+          "nombre": "Mayor a 58.4",
+          "valor": "Mayor a 58.4",
+          "color": "rgba(112,153,89,1)"
+        },
+        {
+          "order": 13,
+          "nombre": "Sin Información Catastral",
+          "valor": "Sin Información Catastral",
+          "color": "rgba(0,0,0,0)"
+        }
+      ],
+      "labelCategorias": "Avalúo Catastral Integral (en SMMLV 2016)",
+      "onStatisticField": "area_mpio",
+      "statisticType": "sum",
+      "groupBy": "rango_avaluo_ha_smmlv_2016"
+    },
+    "distritos_riego_poligono": {
+      "label": "Polígono",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Gran",
+          "valor": "gran",
+          "color": "rgb(143, 17, 57)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mediana",
+          "valor": "mediana",
+          "color": "rgb(255, 120, 0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Pequeña",
+          "valor": "pequeña",
+          "color": "rgb(64, 255, 64)"
+        }
+      ],
+      "labelCategorias": "Escala del distrito",
+      "labelValor": "Número de familias beneficiadas",
+      "labelPorcentaje": "%",
+      "onStatisticField": "num_famili",
+      "statisticType": "sum",
+      "groupBy": "escala"
+    },
+    "distritos_riego_punto_usuarios": {
+      "label": "Número de usuarios",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Gran",
+          "valor": "gran",
+          "color": "rgb(143, 17, 57)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mediana",
+          "valor": "mediana",
+          "color": "rgb(255, 120, 0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Pequeña",
+          "valor": "pequeña",
+          "color": "rgb(64, 255, 64)"
+        }
+      ],
+      "labelCategorias": "Escala del distrito",
+      "labelValor": "Número de usuarios",
+      "labelPorcentaje": "%",
+      "onStatisticField": "numero_usu",
+      "statisticType": "sum",
+      "groupBy": "escala"
+    },
+    "distritos_riego_punto_count": {
+      "label": "Cantidad de distritos",
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Gran",
+          "valor": "gran",
+          "color": "rgb(143, 17, 57)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mediana",
+          "valor": "mediana",
+          "color": "rgb(255, 120, 0)"
+        },
+        {
+          "order": 3,
+          "nombre": "Pequeña",
+          "valor": "pequeña",
+          "color": "rgb(64, 255, 64)"
+        }
+      ],
+      "labelCategorias": "Escala del distrito",
+      "labelValor": "Cantidad de distritos",
+      "labelPorcentaje": "%",
+      "onStatisticField": "objectid",
+      "statisticType": "count",
+      "groupBy": "escala"
+    },
+    "avaluosCatastrales": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Muy bajo: Hasta 1",
+          "valor": "A.Hasta 1",
+          "color": "rgb(255,190,232)"
+        },
+        {
+          "order": 2,
+          "nombre": "Bajo: Mayor que 1 hasta 20",
+          "valor": "B.Mayor que 1 hasta 20",
+          "color": "rgb(253,250,184)"
+        },
+        {
+          "order": 3,
+          "nombre": "Medio: Mayor que 20 hasta 60",
+          "valor": "C.Mayor que 20 hasta 60",
+          "color": "rgb(255,211,127)"
+        },
+        {
+          "order": 4,
+          "nombre": "Alto: Mayor que 60 hasta 100",
+          "valor": "D.Mayor que 60 hasta 100",
+          "color": "rgb(163,240,116)"
+        },
+        {
+          "order": 5,
+          "nombre": "Muy alto: Mayor que 100",
+          "valor": "E.Mayor que 100",
+          "color": "rgb(107,150,85)"
+        }
+      ],
+      "labelCategorias": "Rango Avalúos en SMMLV",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "groupBy": "rango_avaluos"
+    },
+    "informalidadMpal": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Entre 0% hasta 25%",
+          "valor": "0.25",
+          "color": "rgb(0,139,110)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mayor que 25% hasta 50%",
+          "valor": "0.50",
+          "color": "rgb(39,206,177)"
+        },
+        {
+          "order": 3,
+          "nombre": "Mayor que 50% hasta 75%",
+          "valor": "0.75",
+          "color": "rgb(123,245,202)"
+        },
+        {
+          "order": 4,
+          "nombre": "Mayor que 75% hasta 100%",
+          "valor": "1",
+          "color": "rgb(206,245,123)"
+        }
+      ],
+      "labelCategorias": "Informalidad",
+      "onStatisticField": "consecutivo",
+      "statisticType": "count",
+      "groupBy": "informalidad"
+    },
+    "informalidadDepto": {
+      "categorias": [
+        {
+          "order": 1,
+          "nombre": "Entre 0% hasta 25%",
+          "valor": "0.25",
+          "color": "rgb(0,139,110)"
+        },
+        {
+          "order": 2,
+          "nombre": "Mayor que 25% hasta 50%",
+          "valor": "0.50",
+          "color": "rgb(39,206,177)"
+        },
+        {
+          "order": 3,
+          "nombre": "Mayor que 50% hasta 75%",
+          "valor": "0.75",
+          "color": "rgb(123,245,202)"
+        },
+        {
+          "order": 4,
+          "nombre": "Mayor que 75% hasta 100%",
+          "valor": "1",
+          "color": "rgb(206,245,123)"
+        }
+      ],
+      "labelCategorias": "Informalidad",
+      "onStatisticField": "consecutivo",
+      "statisticType": "count",
+      "groupBy": "informalidad"
+    },
+    "monitoreo": {
+      "labelCategorias": "Cultivo",
+      "onStatisticField": "area_ha",
+      "statisticType": "sum",
+      "orderby": "area_ha desc",
+      "color": "#fcfc74",
+      "colores": [
+        {
+          "Marañón": "#ffb03d"
+        },
+        {
+          "Palma de aceite": "#aaff03"
+        },
+        {
+          "Cacao": "#ffb03d"
+        },
+        {
+          "Plantaciones Forestales": "#468f01"
+        },
+        {
+          "Arroz": "#feff5f"
+        },
+        {
+          "Pastos": "#ccffcc"
+        },
+        {
+          "Pastura para la ganadería": "#cdffcd"
+        }
+      ],
+      "groupBy": "cult_leyen"
+    }
+  },
+  "capas": [
+    {
+      "nombre": "Referencia geográfica",
+      "valor": "referencia_geografica_6305",
+      "tieneDocumentos": false
+    },
+    {
+      "nombre": "Índice de informalidad municipal. Diciembre 2019",
+      "valor": "Indice_Informalidad_2019_Mun_3405",
+      "categoria": "informalidadMpal",
+      "esInformalidad": true,
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Ind_Informalidad_Munic_Dic2019",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/30426f01-1384-4467-9ad6-6762d5a7f001",
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Índice de informalidad municipal. Diciembre 2014",
+      "valor": "Indice_Informalidad_2014_Mun_7549",
+      "categoria": "informalidadMpal",
+      "esInformalidad": true,
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Ind_Informalidad_Munic_Dic2014",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/1070a60f-44a1-44e2-b1df-e0cae87709bd",
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Índice de informalidad departamental. Diciembre 2019",
+      "valor": "Indice_Informalidad_2019_Dep_1874",
+      "categoria": "informalidadDepto",
+      "esInformalidad": true,
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Ind_Informalidad_Munic_Dic2019",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/6d84e0db-600e-4de7-b85b-d8b856f2b3fd",
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Índice de informalidad departamental. Diciembre 2014",
+      "valor": "Indice_Informalidad_2014_Dep_2269",
+      "categoria": "informalidadDepto",
+      "esInformalidad": true,
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Ind_Informalidad_Depar_Dic2014",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/faa8623b-583c-449c-9113-2fa16c5f2687",
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Distritos de riego (punto)",
+      "valor": "distritos_riego_punto_3240",
+      "categoria": "distritos_riego_punto_usuarios,distritos_riego_punto_count",
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/9915249c-fe5d-495b-9c9c-ad980f86ea37",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Distritos_ADT_Punto_Dic",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Distritos de riego (polígono)",
+      "valor": "distritos_riego_poligono_543",
+      "categoria": "distritos_riego_poligono",
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/e6a0afaa-b133-4e90-a492-e3500bfaebcf",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Distritos_ADT_Pol_Dic2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Avalúos catastrales vigencia 2019 expresados en SMMLV",
+      "valor": "Avalúos_catastrales_vigencia_2019_en_SMMLV_3688",
+      "categoria": "avaluosCatastrales",
+      "tieneEstadistica": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/5c2fa18d-382e-44b4-a1ee-e4c04c8f9c1c",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Avaluos_catastrales_Jul2020",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Avalúos catastrales vigencia 2016 expresados en SMMLV",
+      "valor": "Avaluos_catastrales_vigencia_2016_en_SMMLV_1101",
+      "categoria": "avaluosCatastrales",
+      "tieneEstadistica": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/7d8c7d73-7a4a-4b66-9282-af30a3df34bc",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Avaluos_catastrales_Dic2016",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Avalúos catastrales vigencia 2017 expresados en SMMLV",
+      "valor": "Avaluos_catastrales_vigencia_2017_en_SMMLV_3695",
+      "categoria": "avaluosCatastrales",
+      "tieneEstadistica": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/b50ba4b8-942b-41e4-83b4-3701d84d7aa8",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Avaluos_catastrales_Dic2017",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Áreas que probablemente presentan agricultura familiar",
+      "valor": "presencia_actores_vinculados_afba_2018_4252",
+      "categoria": "agriculturaFamiliar",
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search;jsessionid=BD0CA19C603E5B2F98CBD78AB74064DA#/metadata/59955c41-da92-4af9-83f0-b4a7699cdbab",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Agricultura_Familiar_Ag2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Áreas potenciales para adecuación de tierras con fines de irrigación (APADT)",
+      "valor": "apadt_irrigacion_feb_2018_2791",
+      "categoria": "irrigacion,irrigacion_disponibilidad_recurso_hidrico,irrigacion_ecosistemico,irrigacion_fisico,irrigacion_socioeconomico,irrigacion_necesidad_recurso_hidrico,irrigacion_regulacion_recurso_hidrico",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.APADT_Nov2018",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/868dcd2e-7679-44ab-96a0-483bbbad9d77",
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Áreas para el mercado de tierras",
+      "valor": "Mercado__tierras_rurales_9301",
+      "categoria": "aptitudMercadoTierras",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/dddc4d6a-4064-4f44-8752-8ee2f9572145",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Areas_MT_V10_Jun2020",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Áreas de referencia ZIDRES",
+      "valor": "zidres_2018_4075",
+      "categoria": "zidres",
+      "tieneEstadistica": true,
+      "tieneMunicipio": false,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/0797b0aa-7d77-44e7-a24b-0243a94fde80",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Areas_Ref_Zidres_feb2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud trucha arcoiris (Oncorhynchus mykiss) en estanques en tierra",
+      "valor": "aptitud_trucha_2017_9978",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/e843f172-7d44-40bc-8cac-63220806c1c1",
+      "mostrarEnCadenas": true,
+      "cadena": "Trucha arcoiris (Oncorhynchus mykiss) en estanques en tierra",
+      "idCadena": "aptitud_trucha_2018",
+      "variables": {
+        "nombreGDB": "Trucha",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Trucha_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud tilapia (Oreochromis niloticus y Oreochromis sp.) en estanques en tierra",
+      "valor": "aptitud_tilapia_2017_1129",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/b901decb-94e4-4d7c-994a-a1d43142ea27",
+      "mostrarEnCadenas": true,
+      "cadena": "Tilapia (Oreochromis niloticus y Oreochromis sp.) en estanques en tierra",
+      "idCadena": "aptitud_tilapia_2018",
+      "variables": {
+        "nombreGDB": "Tilapia",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Tilapia_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud para la producción caprina (Caprae hircus) en pastoreo",
+      "valor": "Aptitud_Caprinos_8331",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/0b110dc8-4699-45a6-a031-5a845c1ee1fc",
+      "mostrarEnCadenas": true,
+      "cadena": "Caprinos (Caprae hircus)",
+      "idCadena": "Aptitud_Caprinos",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Caprinos_Oct2022",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud para la producción de carne ovina (Ovis aries) en pastoreo",
+      "valor": "Aptitud_Ovinos_2669",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/1ace40c2-a11f-4729-8fe8-6f5bb68f1e0c",
+      "mostrarEnCadenas": true,
+      "cadena": "Ovinos (Ovis aries)",
+      "idCadena": "Aptitud_Ovinos",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Carne_Ovina_Dic2021",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud de cerdos en granjas (Sus cropha domesticus)",
+      "valor": "aptitud_porcicola_8074",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/1cde8312-1690-4902-9d3e-50ae9aed672a",
+      "mostrarEnCadenas": true,
+      "cadena": "Cerdos en granjas (Sus cropha domesticus)",
+      "idCadena": "aptitud_porcicola",
+      "variables": {
+        "nombreGDB": "Porcicola",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.aptitud_porcicola_dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud plantaciones forestales",
+      "valor": "aptitud_plantaciones_forestales_comerciales_4144",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/b8de8cd5-e847-4ed5-98b5-5980df012ae7",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Forestal_2014_corregida",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Plantaciones Forestales",
+      "idCadena": "aptitud_plantaciones_forestales_comerciales",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud para el cultivo comercial de soya (Glycine max L.) Primer Semestre",
+      "valor": "aptitud_cultivo_soya_S1_4493",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/b155337c-454c-4396-981d-ca3617df3f48",
+      "mostrarEnCadenas": true,
+      "cadena": "Soya (Glycine max L.) semestre I",
+      "idCadena": "aptitud_cultivo_soya_S1",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_SoyaS1_Ago2022",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud para el cultivo comercial de soya (Glycine max L.) Segundo Semestre",
+      "valor": "aptitud_cultivo_soya_S2_1911",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/680a508b-7308-4c99-a072-45d04122e4a6",
+      "mostrarEnCadenas": true,
+      "cadena": "Soya (Glycine max L.) semestre II",
+      "idCadena": "aptitud_cultivo_soya_S2",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_SoyaS2_Ago2022",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud pirarucú (Arapaima gigas)",
+      "valor": "aptitud_pirarucu_2018_2441",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/a748f110-fad3-4337-a9ff-1a8ea9e6b570",
+      "mostrarEnCadenas": true,
+      "cadena": "Pirarucú (Arapaima gigas)",
+      "idCadena": "aptitud_pirarucu_2018",
+      "variables": {
+        "nombreGDB": "Pirarucu",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Pararucu_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud piña (Anannas comosus L. Mer.) híbrido MD-2",
+      "valor": "aptitud_pina_julio_2017_5530",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/02ace8fb-5e57-4576-80f1-0ed4f2b34038",
+      "mostrarEnCadenas": true,
+      "cadena": "Piña (Anannas comosus L. Mer.) híbrido MD-2",
+      "idCadena": "aptitud_pina",
+      "variables": {
+        "nombreGDB": "Pina",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.aptitud_pina_dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud pimentón (Capsicum annuum)",
+      "valor": "aptitud_pimenton_julio_2017_2627",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/34a7b370-cdd4-4d33-83d6-c81ca9a904e3",
+      "mostrarEnCadenas": true,
+      "cadena": "Pimentón (Capsicum annuum)",
+      "idCadena": "aptitud_pimenton",
+      "variables": {
+        "nombreGDB": "Pimenton",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.aptitud_pimenton_dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud papaya (Carica papaya L.) híbrido Tainung",
+      "valor": "aptitud_papaya_julio_2017_395",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/7b48e53a-d2de-4e60-a257-b88df853de2a",
+      "mostrarEnCadenas": true,
+      "cadena": "Papaya (Carica papaya L.) híbrido Tainung",
+      "idCadena": "aptitud_papaya",
+      "variables": {
+        "nombreGDB": "Papaya",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.aptitud_papaya_dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud papa (Solanum tuberosum L.). Semestre II",
+      "valor": "aptitud_papa_sem_2_7239",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/d5b7bbce-80b3-4d28-840d-1a4de392431a",
+      "mostrarEnCadenas": true,
+      "cadena": "Papa (Solanum tuberosum L.) semestre II",
+      "idCadena": "aptitud_papa_sem_2_Dic2019",
+      "variables": {
+        "nombreGDB": "Papa2",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PapaS2_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud papa (Solanum tuberosum L.). Semestre I",
+      "valor": "aptitud_papa_sem_1_9476",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/9eb5ef49-16b6-42bd-a00e-66aad5a5beae",
+      "mostrarEnCadenas": true,
+      "cadena": "Papa (Solanum tuberosum L.) semestre I",
+      "idCadena": "aptitud_papa_sem_1_Dic2019",
+      "variables": {
+        "nombreGDB": "Papa1",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PapaS1_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud palma de aceite (Elaeis guineensis)",
+      "valor": "aptitud_palma_5525",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/e163c712-193e-4cb8-8dfa-567055ad7ca6",
+      "mostrarEnCadenas": true,
+      "cadena": "Palma de aceite (Elaeis guineensis)",
+      "idCadena": "aptitud_palma_2018",
+      "variables": {
+        "nombreGDB": "Palma",
+        "componentes": [
+          {
+            "nombreGDB": "Frontera agrícola",
+            "label": "Frontera agrícola"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "tieneDocumentos": true
+    },
+    {
+      "nombre": "Aptitud mango (Mangifera indica)",
+      "valor": "aptitud_mango_julio_2017_6687",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/95b70807-4b6b-4f5c-9d9e-2fb7112ebacb",
+      "mostrarEnCadenas": true,
+      "cadena": "Mango (Mangifera indica)",
+      "idCadena": "aptitud_mango_diciembre_2019",
+      "variables": {
+        "nombreGDB": "Mango",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Mango_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud para el cultivo de maíz tradicional (Zea mays L.)",
+      "valor": "Aptitud_Maiz_Tradicional_997",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/f6f68404-60f7-4af1-bad4-ab91d49ccd4c",
+      "mostrarEnCadenas": true,
+      "cadena": "Maíz tradicional (Zea mays L.)",
+      "idCadena": "Aptitud_Maiz_Tradicional",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Maiz_Tradicional_Sep2022",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud maíz (Zea mays L.) tecnificado de clima cálido. Semestre II",
+      "valor": "aptitud_maiz_sem_2_3356",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/92022846-0f01-482c-b81f-81f1f92b3985",
+      "mostrarEnCadenas": true,
+      "cadena": "Maíz (Zea mays L.) tecnificado de clima cálido semestre II",
+      "idCadena": "aptitud_maiz_sem_2_diciembre_2019",
+      "variables": {
+        "nombreGDB": "Maiz2",
+        "componentes": [
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Maiz_CalidoS2_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud maíz (Zea mays L.) tecnificado de clima cálido. Semestre I",
+      "valor": "aptitud_maiz_sem_1_1294",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/06f8b9fe-3a9a-446d-bcbd-6c874a47b048",
+      "mostrarEnCadenas": true,
+      "cadena": "Maíz (Zea mays L.) tecnificado de clima cálido semestre I",
+      "idCadena": "aptitud_maiz_sem_1_diciembre_2019",
+      "variables": {
+        "nombreGDB": "Maiz1",
+        "componentes": [
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Maiz_CalidoS1_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud leche bovina",
+      "valor": "aptitud_leche_bovina_8074",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Leche_Bovina_Dic2019",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/6b86774d-fc4f-4a5a-8491-287decd3d73b",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Leche bovina en pastoreo",
+      "idCadena": "aptitud_leche_bovina"
+    },
+    {
+      "nombre": "Aptitud fresa (Fragaria x ananassa D.)",
+      "valor": "aptitud_fresa_julio_2017_6691",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/61948537-d7fa-4edc-b692-bc6ce144893a",
+      "mostrarEnCadenas": true,
+      "cadena": "Fresa (Fragaria x ananassa D.)",
+      "idCadena": "aptitud_fresa_Dic2019",
+      "variables": {
+        "nombreGDB": "Fresa",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Fresa_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud cebolla de bulbo (Allium cepa L.). Semestre II",
+      "valor": "aptitud_cebolla_bulbo_sem_2_julio_2017_3062",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/a05c8ad5-7d31-4d82-a47e-3d768dfb6621",
+      "mostrarEnCadenas": true,
+      "cadena": "Cebolla bulbo (Allium cepa L.) semestre II",
+      "idCadena": "aptitud_cebolla_bulbo_sem_2_Dic2019",
+      "variables": {
+        "nombreGDB": "Cebolla2",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_CebollaBulboS2_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud cebolla de bulbo (Allium cepa L.). Semestre I",
+      "valor": "aptitud_cebolla_bulbo_sem_1_julio_2017_5268",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/d1a21f7c-ad84-48f1-bf8e-340ce88d8e57",
+      "mostrarEnCadenas": true,
+      "cadena": "Cebolla bulbo (Allium cepa L.) semestre I",
+      "idCadena": "aptitud_cebolla_bulbo_sem_1_Dic2019",
+      "variables": {
+        "nombreGDB": "Cebolla1",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_CebollaBulboS1_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud caucho (Hevea brasiliensis)",
+      "valor": "aptitud_caucho_7542",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/2ec38f5f-ee53-417e-b423-00ede6f53400",
+      "mostrarEnCadenas": true,
+      "cadena": "Caucho (Hevea brasiliensis)",
+      "idCadena": "aptitud_caucho_diciembre_2019",
+      "variables": {
+        "nombreGDB": "Caucho",
+        "componentes": [
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Caucho_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud carne bovina",
+      "valor": "aptitud_carne_bovina_1628",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Carne_Bovina_Dic2019",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/7fcd9c54-f5c6-4602-8dc9-f09dac2f854c",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Carne bovina en pastoreo",
+      "idCadena": "aptitud_carne_bovina"
+    },
+    {
+      "nombre": "Aptitud camarón blanco (Litopenaeus vannamei) en estanques en tierra",
+      "valor": "aptitud_camaron_2018_8295",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/2b3db9cc-9c11-4dfe-95dc-c9a7aff4eb5f",
+      "mostrarEnCadenas": true,
+      "cadena": "Camarón blanco (Litopenaeus vannamei) en estanques en tierra",
+      "idCadena": "aptitud_camaron_2018",
+      "variables": {
+        "nombreGDB": "Camaron",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Camaron_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud cachama (Piaractus brachypomus y Colossoma macropomum) en estanques en tierra",
+      "valor": "aptitud_cachama_2018_1274",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/91e1f5cf-ba89-475a-b154-bd75ce0c5165",
+      "mostrarEnCadenas": true,
+      "cadena": "Cachama (Piaractus brachypomus y Colossoma macropomum) en estanques en tierra",
+      "idCadena": "aptitud_cachama_2018",
+      "variables": {
+        "nombreGDB": "Cachama",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Cachama_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud cacao (Theobroma cacao L.)",
+      "valor": "aptitud_cacao_6197",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/bc51595b-1ec4-43f4-952b-1ab114991c96",
+      "mostrarEnCadenas": true,
+      "cadena": "Cacao (Theobroma cacao L.)",
+      "idCadena": "aptitud_cacao_diciembre_2019",
+      "variables": {
+        "nombreGDB": "Cacao",
+        "componentes": [
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Cacao_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud bocachico, bagre rayado y yamú en estanques en tierra (Yamú Brycon amazonicus, bocachico Prochilodus sp. y bagre rayado Pseudoplatystoma sp)",
+      "valor": "aptitud_especies_nativas_2018_2654",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/6182b696-5781-4feb-a051-dbf13a2c25e4",
+      "mostrarEnCadenas": true,
+      "cadena": "Bocachico, Bagre rayado y Yamú (Bocachico Prochilodus sp., bagre rayado Pseudoplatystoma sp. y yamú Brycon amazonicus) en estanques en tierra",
+      "idCadena": "aptitud_especies_nativas_2018",
+      "variables": {
+        "nombreGDB": "Nativas",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_EspeciesNativas_Febrero2018",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud pesca continental de bocachico (Prochilodous Magdalenae)",
+      "valor": "aptitud_bocachico_mayo_2018_666",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/e9454a62-57c6-4602-bdb6-a7da675580a9",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PCBocachico_Dpto_Mayo2018",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pesca continental de bocachico (Prochilodous Magdalenae)",
+      "idCadena": "aptitud_bocachico_mayo_2018",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud avícola (Gallus gallus)",
+      "valor": "aptitud_avicola_5102",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/c571b749-e247-4ec4-87ba-d3ba6c4100ff",
+      "mostrarEnCadenas": true,
+      "cadena": "Avícola (Gallus gallus)",
+      "idCadena": "aptitud_avicola",
+      "variables": {
+        "nombreGDB": "Avicola",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Avicultura_Dpto_Nov2016",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud arroz (Oryza sativa L.) secano mecanizado",
+      "valor": "aptitud_arroz_secano_5358",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/0ddcfdde-4829-47b2-98d4-0157281c3c69",
+      "mostrarEnCadenas": true,
+      "cadena": "Arroz (Oryza sativa L.) secano mecanizado",
+      "idCadena": "aptitud_arroz_secano",
+      "variables": {
+        "nombreGDB": "Arroz",
+        "componentes": [
+          {
+            "nombreGDB": "Frontera agrícola",
+            "label": "Frontera agrícola"
+          },
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.aptitud_arrozsecano_dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud ají tabasco (Capsicum frutescens)",
+      "valor": "aptitud_aji_tabasco_2017_8083",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/244b3053-67c7-4616-8e09-314f0bd181ea",
+      "mostrarEnCadenas": true,
+      "cadena": "Ají tabasco (Capsicum frutescens)",
+      "idCadena": "aptitud_aji_tabasco_Dic2019",
+      "variables": {
+        "nombreGDB": "Aji",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Aji_Tabasco_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud aguacate (Persea americana) var. Hass",
+      "valor": "aptitud_aguacate_hass_julio_2017_6590",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Aguacate (Persea americana) var. Hass",
+      "idCadena": "aptitud_aguacate_hass_Dic2019",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/a4277827-21a3-4989-82fd-7e513a2da5a1",
+      "variables": {
+        "nombreGDB": "Aguacate",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Agucate_hass_Dic2019",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos angleton (Dichantium Aristatum) y climacuna (Dichantium Anulatum)",
+      "valor": "aptitud_pastos_angleton_5410",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/0eaa3740-d768-4d21-be07-a36590c12c7e",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoAngleton_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos angleton (Dichantium Aristatum) y climacuna (Dichantium Anulatum)",
+      "idCadena": "aptitud_pastos_angleton",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos braquiaria común y basilisk (Brachiaria decumbens) y otros",
+      "valor": "aptitud_pastos_braquiaria_7570",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/7fea4440-08dc-4558-ac66-ad76bd2f8196",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoBraquiar_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos braquiaria común y basilisk (Brachiaria decumbens) y otros",
+      "idCadena": "aptitud_pastos_braquiaria",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos estrella (Cynodon nlemfuensis) y otros",
+      "valor": "aptitud_pastos_estrella_2391",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/03ff9981-823c-4279-be68-aa30249eaa80",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoEstrella_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos estrella (Cynodon nlemfuensis) y otros",
+      "idCadena": "aptitud_pastos_estrella",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos guinea común (Megathyrsus maximus) y otros",
+      "valor": "aptitud_pastos_guinea_3230",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/27483c41-e82d-48c3-b377-09692821f333",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoGuinea_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos guinea común (Megathyrsus maximus) y otros",
+      "idCadena": "aptitud_pastos_guinea",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pasto humidícola (Brachiaria humidicola)",
+      "valor": "aptitud_pastos_humidicola_168",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/7788e29f-9444-488e-bdb9-4927660920e9",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoHumidico_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pasto humidícola (Brachiaria humidicola)",
+      "idCadena": "aptitud_pastos_humidicola",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pasto kikuyo (Cenchrus clandestinus)",
+      "valor": "aptitud_pastos_kikuyo_5241",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/c94d507a-f2dd-4335-a9dd-d094330dee7d",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoKikuyo_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos kikuyo (Cenchrus clandestinus)",
+      "idCadena": "aptitud_pastos_kikuyo",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos pará o admirable (Brachiaria mutica) y otros",
+      "valor": "aptitud_pastos_para_8871",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/c81011a3-2ffe-4873-887d-7aacf5430528",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoPara_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos pará o admirable (Brachiaria mutica) y otros",
+      "idCadena": "aptitud_pastos_para",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud producción pastos raygrass anual (Lolium multiflorum) y otros",
+      "valor": "aptitud_pastos_raygrass_3824",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/404d2500-2afa-4ec8-80be-25ef58423913",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_PastoRaygrass_Sept2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Pastos raygrass anual (Lolium multiflorum) y otros",
+      "idCadena": "aptitud_pastos_raygrass",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Frontera agrícola",
+      "valor": "frontera_agricola_2019_3099",
+      "categoria": "fronteraAgricola",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/63e688fd-12ea-40b4-93db-cb8db001c2f3",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Frontera_Agricola_May_2023",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1",
+      "selected": true
+    },
+    {
+      "nombre": "Aptitud papa (Solanum tuberosum L.) Diacol Capiro. Semestre II",
+      "valor": "aptitud_papa_diacol_capiro_sem_2_2537",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/cb13ee86-e96f-4be0-84f3-15aa68187830",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Papa_DiacolCapiroS2_Dic2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Papa (Solanum tuberosum L.) Diacol Capiro semestre II",
+      "idCadena": "aptitud_papa_diacol_capiro_sem_2",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud papa (Solanum tuberosum L.) Diacol Capiro. Semestre I",
+      "valor": "aptitud_papa_diacol_capiro_sem_1_7179",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/73099260-1378-4e0f-bc84-5dc4ee1a331f",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Papa_DiacolCapiroS1_Dic2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Papa (Solanum tuberosum L.) Diacol Capiro semestre I",
+      "idCadena": "aptitud_papa_diacol_capiro_sem_1",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud caña panelera (Saccharum officinarum L.)",
+      "valor": "Aptitud_Cultivo_Comercial_Cana_Panelera_Jun2020_5365",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/279b0365-43de-4a82-9d81-6c476b6e1603",
+      "mostrarEnCadenas": true,
+      "cadena": "Caña panelera (Saccharum officinarum L.)",
+      "idCadena": "Aptitud_Cultivo_Comercial_Cana_Panelera_Oct2020",
+      "variables": {
+        "nombreGDB": "Cana",
+        "componentes": [
+          {
+            "nombreGDB": "Socioecosistémico",
+            "label": "Socioecosistémico"
+          },
+          {
+            "nombreGDB": "Socioeconómico",
+            "label": "Socioeconómico"
+          },
+          {
+            "nombreGDB": "Físico",
+            "label": "Físico"
+          }
+        ]
+      },
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_CanaPanelera_Oct2020",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud café (Coffea arabica L.)",
+      "valor": "Aptitud_Cafe_Dic2020_1804",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/29c75c5a-7607-45fb-aa43-06523dd34c14",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Cafe_Dic2020",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Café (Coffea arabica L.)",
+      "idCadena": "Aptitud_Cafe_Dic2020",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud banano (Musa sp. AAA)",
+      "valor": "aptitud_banano_7638",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/6a64ad49-c580-454e-8176-b70d7bb39c92",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Banano_Dic2019",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Banano (Musa sp. AAA)",
+      "idCadena": "aptitud_banano",
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud algodón (Gossypium hirsutum). Semestre II",
+      "valor": "aptitud_algodon_sem_2_Jun2020_8758",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_AlgodonS2_Jun2020",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/8fa837e6-9da7-4856-8aa1-faad4007d086",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Algodón (Gossypium hirsutum) semestre II",
+      "idCadena": "aptitud_algodon_sem_2_Jun2020"
+    },
+    {
+      "nombre": "Aptitud búfalos (Bubalus bubalis)",
+      "valor": "Aptitud_Bufalos_Nov2021_8747",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Bufalos_Nov2021",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/71865128-f43c-4469-b623-712114e40dd7",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Búfalos (Bubalus bubalis)",
+      "idCadena": "Aptitud_Bufalos_Nov2021"
+    },
+    {
+      "nombre": "Aptitud para el cultivo comercial de granadilla (Passiflora ligularis juss)",
+      "valor": "Aptitud_Granadilla_6689",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/53204689-8c98-4188-9193-5f77f2abca83",
+      "mostrarEnCadenas": true,
+      "cadena": "Granadilla (Passiflora ligularis juss)",
+      "idCadena": "Aptitud_Granadilla",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Granadilla_Oct2022",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Aptitud gulupa (Passiflora edulis f. edulis)",
+      "valor": "Aptitud_Gulupa_Dic2020_8707",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Gulupa_Dic2020",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/e87219ad-37d5-41d1-b0cb-429e969a980b",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Gulupa (Passiflora edulis f. edulis)",
+      "idCadena": "Aptitud_Gulupa_Dic2020"
+    },
+    {
+      "nombre": "Aptitud maracuyá (Passiflora edulis f. falvicarpa)",
+      "valor": "Aptitud_Maracuya_Dic2020_7684",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_Maracuya_Dic2020",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/7d4b0464-8e1c-4f0c-8005-938c115a93ed",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Maracuyá (Passiflora edulis f. falvicarpa)",
+      "idCadena": "Aptitud_Maracuya_Dic2020"
+    },
+    {
+      "nombre": "Aptitud algodón (Gossypium hirsutum). Semestre I",
+      "valor": "aptitud_algodon_sem_1_Jun2020_4426",
+      "categoria": "zonificacionAptitud",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Aptitud_AlgodonS1_Jun2020",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022",
+      "tieneDocumentos": true,
+      "mostrarEnCadenas": true,
+      "cadena": "Algodón (Gossypium hirsutum) semestre I",
+      "idCadena": "aptitud_algodon_sem_1_Jun2020"
+    },
+    {
+      "nombre": "Unidades físicas homogéneas en Colombia para el cálculo de la Unidad Agrícola Familiar - UAF",
+      "valor": "unidades_fisicas_homogeneas_2228",
+      "categoria": "UFH",
+      "tieneEstadistica": true,
+      "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/1c8452c0-c0b8-408e-b67b-522cb3d3fb3e",
+      "conexionExportarCapa": "\\SRVARCSERV1\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra1@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Unidades_UAF_Oct2021",
+      "tieneDocumentos": true,
+      "consultaExportarCapa": "1=1"
+    },
+    {
+      "nombre": "Monitoreo de Cultivos",
+      "valor": "cultivos_2022_5613",
+      "tieneEstadistica": true,
+      "tieneMunicipio": true,
+      "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Cultivos_2022_v4",
+      "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/171a5d99-8f08-4d45-9b91-87baacad5859",
+      "tieneDocumentos": true,
+      "esMonitoreoCultivos": true,
+      "categoria": "monitoreo",
+      "subCapasAExportar": [
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2020S1",
+          "valor": "arroz_S1_2020_5043",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\ssipra.descarga.Arroz_Semestre_I_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2020S2",
+          "valor": "arroz_S2_2020_2108",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Arroz_Semestre_II_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2021S1",
+          "valor": "arroz_S1_2021_6139",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Arroz_Semestre_I_2021",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2021S2",
+          "valor": "arroz_S2_2021_7469",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Arroz_Semestre_II_2021",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2022S1",
+          "valor": "arroz_S1_2022_408",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\ssipra.descarga.Arroz_Semestre_I_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Arroz 2022S2",
+          "valor": "arroz_S2_2022_5011",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCGISSIPRA0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Arroz_Semestre_II_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Cacao 2020",
+          "valor": "cacao_2020_547",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Cacao_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Cacao 2021",
+          "valor": "cacao_2021_1471",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Cacao_2021",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Cacao 2022",
+          "valor": "cacao_2022_1283",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Cacao_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co:8443/uprageonet/srv/spa/catalog.search#/metadata/51c58d39-c79b-4bc8-816c-2aeedf4f2022"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Marañón 2020",
+          "valor": "maranon_2020_587",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Maranon_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/5b8373e1-8329-4aa6-af8f-55141ceba134"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Marañón 2022",
+          "valor": "maranon_2022_9052",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Maranon_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/8af4b218-1923-4c58-8d98-21993b778a85"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Palma de Aceite 2020",
+          "valor": "palmaDeAceite_2020_9262",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Monitoreo_Palma_de_Aceite_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/50cd639d-5b79-4d3a-b137-da8894365d65"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Palma de Aceite 2021",
+          "valor": "palmaDeAceite_2021_575",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Monitoreo_Palma_de_Aceite_2021",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/c41a0b47-715a-4e0b-9fec-bbc8a57d8735"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Palma de Aceite 2022",
+          "valor": "palmaDeAceite_2022_2422",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Monitoreo_Palma_de_Aceite_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/b1fa2a76-320d-45f2-808a-cd1b54843fbf"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Plantaciones 2020",
+          "valor": "Plantaciones_2020_2916",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Monitoreo_PlantacionesForestales_2020",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/bda95061-0694-4b19-b7a7-7cabdfd8140b"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Plantaciones 2021",
+          "valor": "Plantaciones_2021_4986",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\sipra.descarga.Monitoreo_PlantacionesForestales_2021",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/171a5d99-8f08-4d45-9b91-87baacad5859"
+        },
+        {
+          "nombre": "Monitoreo de Cultivos Plantaciones 2022",
+          "valor": "Plantaciones_2022_4803",
+          "aplicaSoloComparacion": "true",
+          "conexionExportarCapa": "\\SRVARCSERV0\\servicios\\GP_ExportLayers\\configFiles\\srvbdsipra0@sipra_consulta.sde\\sipra.descarga.PUB_Descarga\\ipra.descarga.Monitoreo_PlantacionesForestales_2022",
+          "urlMetadato": "https://catalogometadatos.upra.gov.co/uprageonet/srv/spa/catalog.search#/metadata/fc4c77bf-756e-4534-b4b8-147f1dda1484"
+        }
+      ]
+    }
+  ]
+}
